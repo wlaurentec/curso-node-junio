@@ -1,9 +1,9 @@
 function ordenarProducto(producto) {
   return new Promise((resolve, reject) => {
-    console.log(`Ordenando: ${producto} de freeCodeCamp`);
+    console.log(`1.0: Ordenando: ${producto} de freeCodeCamp`);
     setTimeout(() => {
       if (producto === "taza") {
-        resolve("Ordenada: taza de freeCodeCamp...");
+        resolve("Pedido tomado: taza de freeCodeCamp...");
       } else {
         reject("Lo siento, no tenemos este producto");
       }
@@ -13,8 +13,8 @@ function ordenarProducto(producto) {
 
 function procesarPedido(respuesta) {
   return new Promise((resolve, _reject) => {
-    console.log(`Procesando respuesta...`);
-    console.log(`La respuesta fue: ${respuesta}`);
+    console.log(`2.0: Procesando respuesta...`);
+    console.log(`3.0:La respuesta fue: ${respuesta}`);
 
     setTimeout(() => {
       resolve("Gracias por tu compra. Disfruta tu pedido");
@@ -22,7 +22,7 @@ function procesarPedido(respuesta) {
   });
 }
 
-/* ordenarProducto("casa")
+/* ordenarProducto("taza")
   .then(procesarPedido)
   .then((mensaje) => console.log(mensaje))
   .catch((error) => console.log(error)); */
@@ -39,4 +39,4 @@ async function realizarPedido(producto) {
   }
 }
 
-realizarPedido("taza");
+realizarPedido("tazas");
