@@ -1,0 +1,19 @@
+{
+  "name": "curso-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wlaurentec/curso-node-junio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wlaurentec/curso-node-junio/issues"
+  },
+  "homepage": "https://github.com/wlaurentec/curso-node-junio#readme"
+}
