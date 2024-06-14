@@ -1,7 +1,11 @@
-const os = require ('os');
+function mostrarTema(tema) {
+  console.log(`El tema seleccionado es: ${tema}`);
+}
 
-console.log(os.type());
-console.log(os.version());
-console.log(os.homedir());
-console.log(os.uptime());
-console.log(os.hostname());
+setTimeout(mostrarTema, 2000, 'JavaScript');
+
+function sumar(a, b) {
+  console.log(a + b);
+}
+
+setTimeout(sumar, 3000, 10, 20);
