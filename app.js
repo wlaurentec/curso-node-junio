@@ -1,9 +1,22 @@
-const EventEmitter = require('events');
+const promesaCumplida = false;
 
-const emisorProductos = new EventEmitter();
-
-emisorProductos.on('nuevo-producto', (data) => {
-  console.log('Se ha emitido el evento nuevo-producto:', data);
+const miPromesa = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (promesaCumplida) {
+      resolve("Promesa resuelta");
+    } else {
+      reject("Promesa rechazada");
+    }
+  }, 2000);
 });
 
-emisorProductos.emit('nuevo-producto', 'Monitor curvo de 49"');
+const manejarPromesaCumplida = (valor) => {
+  console.log(valor);
+};
+
+const manejarPromesaRechazada = (razon) => {
+  console.log(razon);
+};
+
+miPromesa
+  .then(manejarPromesaCumplida, manejarPromesaRechazada);
