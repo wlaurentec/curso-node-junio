@@ -1,12 +1,6 @@
-const http = require("http");
-const server = http.createServer((req, res) => {
-  console.log("request made to server");
-  console.log(req.url);
-  console.log(req.method);
-  res.end("Hello World");
-});
+const miURL = new URL("https://www.youtube.com/watch?v=1hpc70_OoAg&t=15059s");
 
-const port = 3000;
-
-server.listen(port,() => console.log(`Server has started on port http://localhost:${port}`));
-
+console.log(miURL.hostname);
+console.log(miURL.pathname);
+console.log(miURL.searchParams);
+console.log(miURL.toString());
