@@ -1,5 +1,7 @@
-/* console.log(process)
-console.log(process.env) 
-console.log(process.argv)*/
+const os = require ('os');
 
-console.log(process.memoryUsage())
+console.log(os.type());
+console.log(os.version());
+console.log(os.homedir());
+console.log(os.uptime());
+console.log(os.hostname());
