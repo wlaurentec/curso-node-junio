@@ -1,6 +1,5 @@
-const saludo = require("./saludos");
+console.log("Hola Mundo");
+console.warn("Ocurrio un warm");
+console.error("Ocurrio un error");
 
-console.log(saludo)
-
-console.log(saludo.saludar("freeCodeCamp"));
-console.log(saludo.saludarHolaMundo());
+console.error(new Error("Ocurrio un error"));
