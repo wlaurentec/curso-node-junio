@@ -1,22 +1,17 @@
-const promesaCumplida = false;
-
-const miPromesa = new Promise((resolve, reject) => {
+const estatusPedido = () => {
+  return Math.random() < 0.8;
+};
+const miPedidoDePizza = new Promise((resolve, reject) => {
   setTimeout(() => {
-    if (promesaCumplida) {
-      resolve("Promesa resuelta");
+    if (estatusPedido()) {
+      resolve("Tu pedido fue aceptado");
     } else {
-      reject("Promesa rechazada");
+      reject("Tu pedido fue rechazado");
     }
   }, 2000);
 });
 
-const manejarPromesaCumplida = (valor) => {
-  console.log(valor);
-};
+miPedidoDePizza
+  .then((mensajeDeConfirmacion) => console.log(mensajeDeConfirmacion))
+  .catch((mensajeDeRechazo) => console.log(mensajeDeRechazo));
 
-const manejarPromesaRechazada = (razon) => {
-  console.log(razon);
-};
-
-miPromesa
-  .then(manejarPromesaCumplida, manejarPromesaRechazada);
