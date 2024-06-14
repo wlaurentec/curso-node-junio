@@ -1,5 +1,5 @@
-console.log("Hola Mundo");
-console.warn("Ocurrio un warm");
-console.error("Ocurrio un error");
+/* console.log(process)
+console.log(process.env) 
+console.log(process.argv)*/
 
-console.error(new Error("Ocurrio un error"));
+console.log(process.memoryUsage())
